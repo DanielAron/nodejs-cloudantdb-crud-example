@@ -100,6 +100,11 @@ https://github.com/IBM-Bluemix/nodejs-cloudantdb-crud-example
 ```		
 Paste this URL in the browser to open the application.
 
+### Upload the app to bluemix
+```
+  bluemix app push app_name
+```
+
 ### For more documents on Cloudant NoSQL DB
 
 * https://cloudant.com

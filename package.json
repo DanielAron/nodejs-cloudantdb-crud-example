@@ -15,7 +15,7 @@
 		"nano":"*",
 		"path": "*",
 		"json2csv": "*",
-		"fs": "*"
+		"fs": "0.0.1-security"
 	},
 	"repository": {},
 	"engines": {

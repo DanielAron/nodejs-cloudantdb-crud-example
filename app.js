@@ -11,8 +11,10 @@ app.use(express.static(__dirname + '/public'));
 
 //To Store URL of Cloudant VCAP Services as found under environment variables on from App Overview page
 var cloudant_url;
+//var cloudant_url = "https://3527bf40-6715-4772-9c69-f595230406c6-bluemix:1defd8170aa92d8b2b5f9386cf8b0516d17f61a0de67ee6ca1a0f68d8e288357@3527bf40-6715-4772-9c69-f595230406c6-bluemix.cloudant.com";
 var services = JSON.parse(process.env.VCAP_SERVICES || "{}");
 // Check if services are bound to your project
+
 if(process.env.VCAP_SERVICES)
 {
 	services = JSON.parse(process.env.VCAP_SERVICES);
@@ -25,6 +27,7 @@ if(process.env.VCAP_SERVICES)
 		console.log("password = " + services.cloudantNoSQLDB[0].credentials.password);
 	}
 }
+
 
 //Connect using cloudant npm and URL obtained from previous step
 var cloudant = Cloudant({url: cloudant_url});
